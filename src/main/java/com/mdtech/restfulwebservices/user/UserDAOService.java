@@ -44,7 +44,7 @@ public class UserDAOService {
         return u;
     }
 
-    public void deleteUser(User user) {
-        users.removeIf(u -> u.getUserId() == user.getUserId());
+    public boolean deleteUser(int userId) {
+        return users.removeIf(u -> u.getUserId() == userId);
     }
 }
