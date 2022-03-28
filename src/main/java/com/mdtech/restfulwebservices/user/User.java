@@ -1,9 +1,14 @@
 package com.mdtech.restfulwebservices.user;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
+
 public class User {
 
     private int userId;
+    @Size(min = 2, message = "Name should contain at least 2 character")
     private String name;
+    @Email(message = "Invalid email id")
     private String email;
 
     public User() {}
