@@ -55,6 +55,7 @@ public class UserController {
 
     @DeleteMapping("/user/{userId}")
     public void deleteUser(@PathVariable int userId) {
+        System.out.println("userid : "+userId);
         boolean isUserDeleted = userDAOService.deleteUser(userId);
         if (!isUserDeleted)
             throw new UserNotFoundException("User with userId : "+userId+" NOT FOUND");

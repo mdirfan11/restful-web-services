@@ -45,6 +45,7 @@ public class UserDAOService {
     }
 
     public boolean deleteUser(int userId) {
+        System.out.println("user id : "+userId);
         return users.removeIf(u -> u.getUserId() == userId);
     }
 }
